@@ -48,7 +48,7 @@ and copy to "\<INORig directory\>/external/face3d/examples/Data/BFM/Out/".
 
 
 (5) Download pre-trained model (Due to the sensitivity of face swapping, please email ziqian_bai@sfu.ca to request for 
-the models. Sorry for the inconvenience and thank you for your understanding!) to "\<INORig directory\>/net_weights/". 
+the models. Please use your institution email. Sorry for the inconvenience and thank you for your understanding!) to "\<INORig directory\>/net_weights/". 
 Need to create the folder. Unzip to get .pth files. "Ours.pth" is 
 the basic version. "Ours(R).pth" is a more robust while less accurate version. Experiments in the paper are performed 
 with these models.
