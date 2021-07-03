@@ -32,11 +32,13 @@ if __name__ == '__main__':
     torch.manual_seed(7777777)
     np.random.seed(7777777)
 
-    save_video_mesh = False
     rig_img_dir = './examples/case1'
-    rig_out_dir = './out_dir/case1'
     src_vid_path = './examples/videos/clip1.mp4'
-    vid_out_dir = './out_dir/case1_clip1'
+
+    save_video_mesh = False
+    out_dir = './out_dir/case1_clip1'
+    rig_out_dir = out_dir
+    vid_out_dir = os.path.join(out_dir, 'videos')
     checkpoint_path = '/home/ziqianb/Documents/Face_NonRigidMVS/logs/Oct03_18-58-06_cs-guv-gpu02_PersonalizedRig_AdapResNetIDAdapMlpPCAMlpExpFeatLinear_OptAdapExpModel_AllMultiLevel_8Ep_ShadingDynAlbedo_NotAffectGeo_ESRC_SfsnetSH_2-7views/checkpoints/iter_039000.pth.tar'
     video_checkpoint_path = '/home/ziqianb/Documents/Face_NonRigidMVS/logs/Oct03_18-58-06_cs-guv-gpu02_PersonalizedRig_AdapResNetIDAdapMlpPCAMlpExpFeatLinear_OptAdapExpModel_AllMultiLevel_8Ep_ShadingDynAlbedo_NotAffectGeo_ESRC_SfsnetSH_2-7views/checkpoints/iter_039000.pth.tar'
 

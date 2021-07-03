@@ -2,5 +2,5 @@
 .idea
 external/
 net_weights/
-examples/
 out_dir/
+tmp/
