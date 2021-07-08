@@ -12,8 +12,7 @@ from demo_utils import *
 
 def init_model(checkpoint_path):
     model = INORig(opt_step_size=1e-2)
-    pre_checkpoint = dl_util.load_checkpoints(checkpoint_path)
-    model.load_state(pre_checkpoint['net_instance'])
+    model.load_state_dict(torch.load(checkpoint_path))
     model.cuda()
     model.eval()
     model.training = False
@@ -39,8 +38,8 @@ if __name__ == '__main__':
     out_dir = './out_dir/case1_clip1'
     rig_out_dir = out_dir
     vid_out_dir = os.path.join(out_dir, 'videos')
-    checkpoint_path = '/home/ziqianb/Documents/Face_NonRigidMVS/logs/Oct03_18-58-06_cs-guv-gpu02_PersonalizedRig_AdapResNetIDAdapMlpPCAMlpExpFeatLinear_OptAdapExpModel_AllMultiLevel_8Ep_ShadingDynAlbedo_NotAffectGeo_ESRC_SfsnetSH_2-7views/checkpoints/iter_039000.pth.tar'
-    video_checkpoint_path = '/home/ziqianb/Documents/Face_NonRigidMVS/logs/Oct03_18-58-06_cs-guv-gpu02_PersonalizedRig_AdapResNetIDAdapMlpPCAMlpExpFeatLinear_OptAdapExpModel_AllMultiLevel_8Ep_ShadingDynAlbedo_NotAffectGeo_ESRC_SfsnetSH_2-7views/checkpoints/iter_039000.pth.tar'
+    checkpoint_path = './net_weights/Ours.pth'
+    video_checkpoint_path = './net_weights/Ours.pth'
 
     fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, device='cuda:0', flip_input=True)
     face_detector = face_detector_module.FaceDetector(device='cuda', verbose=False)
